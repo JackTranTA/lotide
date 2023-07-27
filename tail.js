@@ -7,7 +7,14 @@ const assertEqual = function(actual, expected) {
 };
 
 const tail = function(array) {
-    return array[0]; //or array.shift();
+    if (array.length == 0) {
+        return array;
+    }
+    let tail = [];
+    for (var i = 1; i < array.length; i++) {
+        tail.push(array[i]);
+    }
+    return tail;
 };
 
 const words = ["Yo Yo", "Lighthouse", "Labs"];
