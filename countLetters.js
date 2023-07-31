@@ -7,18 +7,18 @@ const assertEqual = function(actual, expected) {
 };
 
 const countLetters = function(string) {
-  const output = {};
+  const results = {};
   for (const letter of string) {
     if (letter === ' ') {
       continue;
     }
-    if (!output[letter]) {
-      output[letter] = 1;
+    if (!results[letter]) {
+      results[letter] = 1;
     } else {
-      output[letter]++;
+      results[letter]++;
     }
   }
-  return output;
+  return results;
 };
 
 const result1 = countLetters("lighthouse in the house");
